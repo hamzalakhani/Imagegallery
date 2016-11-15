@@ -16,6 +16,7 @@
 		CA42A7B21DDA4DA200BF141E /* Lighthouse-in-Field.jpg in Resources */ = {isa = PBXBuildFile; fileRef = CA42A7B11DDA4DA200BF141E /* Lighthouse-in-Field.jpg */; };
 		CA42A7B41DDA4DB100BF141E /* Lighthouse-night.jpg in Resources */ = {isa = PBXBuildFile; fileRef = CA42A7B31DDA4DB100BF141E /* Lighthouse-night.jpg */; };
 		CA42A7B61DDA4DBB00BF141E /* Lighthouse.jpg in Resources */ = {isa = PBXBuildFile; fileRef = CA42A7B51DDA4DBB00BF141E /* Lighthouse.jpg */; };
+		CA42A7B91DDA789E00BF141E /* ViewController1.m in Sources */ = {isa = PBXBuildFile; fileRef = CA42A7B81DDA789E00BF141E /* ViewController1.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -32,6 +33,8 @@
 		CA42A7B11DDA4DA200BF141E /* Lighthouse-in-Field.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; name = "Lighthouse-in-Field.jpg"; path = "../../ScrollView-Images/Images.xcassets/Lighthouse-in-Field.imageset/Lighthouse-in-Field.jpg"; sourceTree = "<group>"; };
 		CA42A7B31DDA4DB100BF141E /* Lighthouse-night.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; name = "Lighthouse-night.jpg"; path = "../../ScrollView-Images/Images.xcassets/Lighthouse-night.imageset/Lighthouse-night.jpg"; sourceTree = "<group>"; };
 		CA42A7B51DDA4DBB00BF141E /* Lighthouse.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; name = Lighthouse.jpg; path = "../../ScrollView-Images/Images.xcassets/Lighthouse-zoomed.imageset/Lighthouse.jpg"; sourceTree = "<group>"; };
+		CA42A7B71DDA789E00BF141E /* ViewController1.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ViewController1.h; sourceTree = "<group>"; };
+		CA42A7B81DDA789E00BF141E /* ViewController1.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ViewController1.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -71,6 +74,8 @@
 				CA42A79E1DDA4D6500BF141E /* AppDelegate.m */,
 				CA42A7A01DDA4D6500BF141E /* ViewController.h */,
 				CA42A7A11DDA4D6500BF141E /* ViewController.m */,
+				CA42A7B71DDA789E00BF141E /* ViewController1.h */,
+				CA42A7B81DDA789E00BF141E /* ViewController1.m */,
 				CA42A7A31DDA4D6500BF141E /* Main.storyboard */,
 				CA42A7A61DDA4D6500BF141E /* Assets.xcassets */,
 				CA42A7A81DDA4D6500BF141E /* LaunchScreen.storyboard */,
@@ -163,6 +168,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				CA42A7B91DDA789E00BF141E /* ViewController1.m in Sources */,
 				CA42A7A21DDA4D6500BF141E /* ViewController.m in Sources */,
 				CA42A79F1DDA4D6500BF141E /* AppDelegate.m in Sources */,
 				CA42A79C1DDA4D6500BF141E /* main.m in Sources */,

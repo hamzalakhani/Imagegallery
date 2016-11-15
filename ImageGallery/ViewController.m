@@ -17,6 +17,10 @@
 - (void)viewDidLoad {
     [super viewDidLoad];
     
+    UITapGestureRecognizer *tapGestureRecognizer = [[UITapGestureRecognizer alloc] initWithTarget:self action:@selector(handleTapFrom:)];
+
+
+    
     
     UIImageView *imageViewOne = [[UIImageView alloc] initWithFrame:CGRectZero];
     imageViewOne.translatesAutoresizingMaskIntoConstraints = NO;
@@ -24,6 +28,8 @@
     [self.scrollView addSubview:imageViewOne];
     //self.scrollView.contentSize = self.boxOne.bounds.size;
 //    imagview.frame.size.width
+    imageViewOne.userInteractionEnabled = TRUE;
+    [imageViewOne addGestureRecognizer:tapGestureRecognizer];
 
     [self.scrollView addConstraint:[NSLayoutConstraint constraintWithItem:imageViewOne
                                                           attribute:NSLayoutAttributeLeftMargin
@@ -62,7 +68,10 @@
     imageViewTwo.translatesAutoresizingMaskIntoConstraints = NO;
     imageViewTwo.image = [UIImage imageNamed:@"Lighthouse-night.jpg"];
     [self.scrollView addSubview:imageViewTwo];
-//quiestions about left margin and top margin
+//questions about left margin and top margin
+    
+    imageViewTwo.userInteractionEnabled = TRUE;
+    [imageViewTwo addGestureRecognizer:tapGestureRecognizer];
     
     [self.scrollView addConstraint:[NSLayoutConstraint constraintWithItem:imageViewTwo
                                                                 attribute:NSLayoutAttributeLeftMargin
@@ -111,6 +120,9 @@
     imageViewThree.image = [UIImage imageNamed:@"Lighthouse-in-Field.jpg"];
     [self.scrollView addSubview:imageViewThree];
     
+    imageViewThree.userInteractionEnabled = TRUE;
+    [imageViewThree addGestureRecognizer:tapGestureRecognizer];
+    
     [self.scrollView addConstraint:[NSLayoutConstraint constraintWithItem:imageViewThree
                                                                 attribute:NSLayoutAttributeLeftMargin
                                                                 relatedBy:NSLayoutRelationEqual
@@ -153,8 +165,12 @@
                                                                  constant:0]];
     
 }
-
-
+- (void) handleTapFrom: (UITapGestureRecognizer *)recognizer
+{
+    [self performSegueWithIdentifier:@"imageViewFirst" sender:(recognizer)];
+    
+    if recognizer ==
+}
 
 - (void)didReceiveMemoryWarning {
     [super didReceiveMemoryWarning];
