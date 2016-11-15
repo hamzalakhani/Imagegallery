@@ -25,6 +25,10 @@
     self.scrollView1.maximumZoomScale = 4.0;
     
     self.scrollView1.zoomScale = 1.0;
+    
+    if (self.selectedImage) {
+        [self.imageView setImage:self.selectedImage];
+    }
 }
 -(UIView*) viewForZoomingInScrollView:(UIScrollView *)scrollView
 {

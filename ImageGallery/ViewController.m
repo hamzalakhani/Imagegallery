@@ -7,9 +7,15 @@
 //
 
 #import "ViewController.h"
-
+#import "ViewController1.h"
 @interface ViewController ()
 @property (weak, nonatomic) IBOutlet UIScrollView *scrollView;
+@property (weak, nonatomic) IBOutlet UIImage *imageViewOne;
+@property (weak, nonatomic) IBOutlet UIImage *imageViewTwo;
+@property (weak, nonatomic) IBOutlet UIImage *imageViewThree;
+@property UIImage *selectedImage;
+
+
 @end
 
 @implementation ViewController
@@ -18,8 +24,8 @@
     [super viewDidLoad];
     
     UITapGestureRecognizer *tapGestureRecognizer = [[UITapGestureRecognizer alloc] initWithTarget:self action:@selector(handleTapFrom:)];
-
-
+    UITapGestureRecognizer *tapGestureRecognizer2 = [[UITapGestureRecognizer alloc] initWithTarget:self action:@selector(handleTapFrom:)];
+    UITapGestureRecognizer *tapGestureRecognizer3= [[UITapGestureRecognizer alloc] initWithTarget:self action:@selector(handleTapFrom:)];
     
     
     UIImageView *imageViewOne = [[UIImageView alloc] initWithFrame:CGRectZero];
@@ -71,7 +77,7 @@
 //questions about left margin and top margin
     
     imageViewTwo.userInteractionEnabled = TRUE;
-    [imageViewTwo addGestureRecognizer:tapGestureRecognizer];
+    [imageViewTwo addGestureRecognizer:tapGestureRecognizer2];
     
     [self.scrollView addConstraint:[NSLayoutConstraint constraintWithItem:imageViewTwo
                                                                 attribute:NSLayoutAttributeLeftMargin
@@ -121,7 +127,7 @@
     [self.scrollView addSubview:imageViewThree];
     
     imageViewThree.userInteractionEnabled = TRUE;
-    [imageViewThree addGestureRecognizer:tapGestureRecognizer];
+    [imageViewThree addGestureRecognizer:tapGestureRecognizer3];
     
     [self.scrollView addConstraint:[NSLayoutConstraint constraintWithItem:imageViewThree
                                                                 attribute:NSLayoutAttributeLeftMargin
@@ -165,11 +171,11 @@
                                                                  constant:0]];
     
 }
-- (void) handleTapFrom: (UITapGestureRecognizer *)recognizer
+- (void) handleTapFrom: (UITapGestureRecognizer *)sender
 {
-    [self performSegueWithIdentifier:@"imageViewFirst" sender:(recognizer)];
     
-    if recognizer ==
+    [self performSegueWithIdentifier:@"imageViewFirst" sender:(sender)];
+ 
 }
 
 - (void)didReceiveMemoryWarning {
@@ -177,5 +183,14 @@
     // Dispose of any resources that can be recreated.
 }
 
+
+-(void)prepareForSegue:(UIStoryboardSegue *)segue sender:(id)sender {
+    UITapGestureRecognizer* tapGesture = (UITapGestureRecognizer*)sender;
+    UIImageView * imageView = (UIImageView* )tapGesture.view;
+    
+    ViewController1* dvc = segue.destinationViewController;
+    
+    dvc.selectedImage = imageView.image;
+}
 
 @end

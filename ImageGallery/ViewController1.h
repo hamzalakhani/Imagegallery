@@ -10,4 +10,6 @@
 
 @interface ViewController1 : UIViewController
 
+@property (weak, nonatomic)  UIImage *selectedImage;
+
 @end
